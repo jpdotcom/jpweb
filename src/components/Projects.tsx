@@ -25,9 +25,9 @@ function Projects({items,pageLinks}:Props){
     let ProjectImageLinks=[
     
         
-        "./src/assets/UTTT.png",
-        "./src/assets/FFT.png",
-        "./src/assets/Task.png"
+        "/src/assets/UTTT.png",
+        "/src/assets/FFT.png",
+        "/src/assets/Task.png"
     ]
 
     return <>
