@@ -1,5 +1,4 @@
 import "./ProjectBlog.css"
-import logo from "/Users/jaypatel/Desktop/wikiFind/wiki-Find/src/assets/UTTT.png"
 import { useState } from "react";
 
 interface Props {
