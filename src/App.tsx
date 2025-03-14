@@ -21,8 +21,8 @@ function App(){
 
         <Route path="/" element={<HomePages items={homePages}></HomePages>}></Route>
         <Route path="/Blog" element={<Blog/>}></Route>
-        <Route path="/Projects" element={<Projects items={ProjectsPage} pageLinks={ProjectPageLinks}> </Projects>}></Route>
-        <Route path="/Contact Me" element={<Contact items={ContactPages} pageLinks={ContactPageLinks}> </Contact>} ></Route>
+        <Route path="/Projects" element={<Projects items={ProjectsPage} pageLinks={ProjectPageLinks} />}></Route>
+        <Route path="/Contact Me" element={<Contact items={ContactPages} pageLinks={ContactPageLinks} />} ></Route>
     </Routes>
     
     </BrowserRouter> 
