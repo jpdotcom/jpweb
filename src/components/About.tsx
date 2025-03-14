@@ -8,7 +8,7 @@ function About(){
     
     return  <>
     <h1 style={{textAlign:"center"}}> About Me!</h1>
-    <div class="about" style={{width:"50%", marginLeft:"25%", marginTop:"20%"}}><span style={{color:"black"}}> {about}</span></div>
+    <div className="about" style={{width:"50%", marginLeft:"25%", marginTop:"20%"}}><span style={{color:"black"}}> {about}</span></div>
     </>
 }
 

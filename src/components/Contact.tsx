@@ -1,41 +1,45 @@
 import AnchorList from "./AnchorList"
 import "./Contact.css"
 import emailjs from '@emailjs/browser'
-import React,{useRef} from 'react'
-import { useState } from "react"
+import React, { useRef, useState } from 'react';
+
 
 interface Props{
   items: string[]
   pageLinks: string[]
 }
 function Contact({items,pageLinks}:Props){
-    const form= useRef();
+    const form = useRef<HTMLFormElement>(null);
     const [alertUp,changeAlert]=useState(false);
-    const sendEmail = (e) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
-      emailjs
-        .sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID!,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
-          form.current, {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY!,
-        })
-        .then(
-          () => {
-            console.log('SUCCESS!');
-            console.log(alertUp)
-            form.current.reset();
-            changeAlert(true);
-            setTimeout(()=>{
-              changeAlert(false);
-            },5000)
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
-    };
+      if (form.current) {
+        emailjs
+          .sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID!,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
+            form.current,
+            {
+              publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY!,
+            }
+          )
+          .then(
+            () => {
+              console.log('SUCCESS!');
+              console.log(alertUp);
+              if (form.current) form.current.reset();
+              changeAlert(true);
+              setTimeout(() => {
+                changeAlert(false);
+              }, 3000); // Adjust the timeout duration as needed
+            },
+            (error) => {
+              console.log('FAILED...', error);
+            }
+          );
+      }
+  }
    
     return <>
     <AnchorList items={items} links={pageLinks}> 
