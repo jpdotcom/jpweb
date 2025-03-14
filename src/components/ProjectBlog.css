@@ -1,0 +1,78 @@
+.project-blog {
+  background: linear-gradient(135deg, #0A192F, #112A44);
+  border-radius: 16px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-blog:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-blog-hover {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 20px;
+  padding: 18px;
+  border: 4px solid white;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 400px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.project-blog-hover:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+p {
+  color: #E0E0E0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.gitPromo {
+  display: flex;
+  justify-content: center;
+}
+
+.project-image {
+  border: 2px solid white;
+  border-radius: 12px;
+  margin-bottom: 12%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.project-description {
+  margin: 5px 0;
+  color: #B0C4DE;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.divider {
+  margin-top: 12px;
+  border: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 80%;
+}
